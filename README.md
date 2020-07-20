@@ -33,8 +33,11 @@ Then select and open ```RoverOnMars.sln```
 ![image](https://user-images.githubusercontent.com/47017138/87991352-daa14d80-ca9a-11ea-870b-54c3cd66befb.png)
 ##### Using the Application
 ![image](https://user-images.githubusercontent.com/47017138/87991481-1f2ce900-ca9b-11ea-9e15-a9a0f0afd7c6.png)
+![image](https://user-images.githubusercontent.com/47017138/87991604-5b604980-ca9b-11ea-95c4-c05264a942af.png)
+
 ##### Application End
-COMING SOON!!
+![image](https://user-images.githubusercontent.com/47017138/87991667-834fad00-ca9b-11ea-8788-8200a7340963.png)
+
 
 ------------------------------
 
