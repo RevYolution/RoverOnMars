@@ -39,7 +39,7 @@ namespace RoverOnMars
         public int[] PlateuArea()
         {
             int[] plateuAreaInput = new int[2];
-            Console.WriteLine("To check security please enter how large the area is");
+            Console.WriteLine("Welcome! Please provide the search area you would like to explore today.");
             Console.WriteLine("How wide is the area?");
             string plateauWidthInput = Console.ReadLine();
 

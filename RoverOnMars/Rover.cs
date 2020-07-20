@@ -4,9 +4,8 @@ using System.Text;
 
 namespace RoverOnMars
 {
-    class Rover : IMoveRover
+    public class Rover : IMoveRover
     {
-        public string Name { get; set; }
         public int Xposition { get; set; }
 
         public int Yposition { get; set; }

@@ -5,10 +5,7 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoverOnMars", "RoverOnMars\RoverOnMars.csproj", "{6306E722-280F-4120-80B9-E523C1DCF6CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoverTests", "RoverTests\RoverTests.csproj", "{CED6A58E-C142-4B60-A55B-AAB5A474DDED}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6306E722-280F-4120-80B9-E523C1DCF6CC} = {6306E722-280F-4120-80B9-E523C1DCF6CC}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoverTests", "RoverTests\RoverTests.csproj", "{2F245CCC-04BE-4BEA-B6F1-989A6B35485F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +17,10 @@ Global
 		{6306E722-280F-4120-80B9-E523C1DCF6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6306E722-280F-4120-80B9-E523C1DCF6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6306E722-280F-4120-80B9-E523C1DCF6CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CED6A58E-C142-4B60-A55B-AAB5A474DDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CED6A58E-C142-4B60-A55B-AAB5A474DDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CED6A58E-C142-4B60-A55B-AAB5A474DDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CED6A58E-C142-4B60-A55B-AAB5A474DDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F245CCC-04BE-4BEA-B6F1-989A6B35485F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F245CCC-04BE-4BEA-B6F1-989A6B35485F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F245CCC-04BE-4BEA-B6F1-989A6B35485F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F245CCC-04BE-4BEA-B6F1-989A6B35485F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
