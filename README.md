@@ -21,9 +21,9 @@ Select ```File``` -> ```Open``` -> ```Project/Solution```
 
 Next navigate to the location you cloned the Repository.
 
-Double click on the ```Lab07-LendingLibrary``` directory.
+Double click on the ```RoverOnMars``` directory.
 
-Then select and open ```LendingLibrary.sln```
+Then select and open ```RoverOnMars.sln```
 
 ------------------------------
 
