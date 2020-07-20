@@ -30,7 +30,7 @@ Then select and open ```RoverOnMars.sln```
 ## Visuals
 
 ##### Application Start
-COMING SOON!!
+![image](https://user-images.githubusercontent.com/47017138/87991352-daa14d80-ca9a-11ea-870b-54c3cd66befb.png)
 ##### Using the Application
 COMING SOON!!
 ##### Application End
