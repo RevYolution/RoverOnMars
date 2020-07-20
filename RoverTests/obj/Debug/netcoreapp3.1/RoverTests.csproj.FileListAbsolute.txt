@@ -92,8 +92,9 @@ C:\Users\USER\source\repos\RoverOnMars\RoverTests\bin\Debug\netcoreapp3.1\RoverO
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.csprojAssemblyReference.cache
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.AssemblyInfoInputs.cache
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.AssemblyInfo.cs
-C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.csproj.CoreCompileInputs.cache
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.csproj.CopyComplete
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.dll
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.pdb
 C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.genruntimeconfig.cache
+C:\Users\USER\source\repos\RoverOnMars\RoverTests\bin\Debug\netcoreapp3.1\DeepEqual.dll
+C:\Users\USER\source\repos\RoverOnMars\RoverTests\obj\Debug\netcoreapp3.1\RoverTests.csproj.CoreCompileInputs.cache

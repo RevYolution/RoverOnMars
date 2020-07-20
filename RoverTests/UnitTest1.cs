@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using RoverOnMars;
+using DeepEqual.Syntax;
 
 namespace RoverTests
 {
@@ -131,7 +132,7 @@ namespace RoverTests
              testRover.RoverMove(testArea, testStart, testCommands);
 
             //Assert
-            //Assert.Equal<Rover>(expectedRover, testRover);
+            expectedRover.ShouldDeepEqual(testRover);
             Assert.Equal(1, testRover.Xposition);
             Assert.Equal(3, testRover.Yposition);
             Assert.Equal(Direction.N, testRover.Direction);
@@ -155,7 +156,7 @@ namespace RoverTests
             testRover.RoverMove(testArea, testStart, testCommands);
 
             //Assert
-            //Assert.Equal<Rover>(expectedRover, testRover);
+            expectedRover.ShouldDeepEqual(testRover);
             Assert.Equal(5, testRover.Xposition);
             Assert.Equal(1, testRover.Yposition);
             Assert.Equal(Direction.E, testRover.Direction);

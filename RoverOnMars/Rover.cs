@@ -107,8 +107,8 @@ namespace RoverOnMars
 
                 if(this.Xposition < 0 || this.Xposition > plateauArea[0] || this.Yposition < 0 || this.Yposition > plateauArea[1])
                 {
-                    Console.WriteLine("=================================================");
-                    Console.WriteLine("=================================================");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
                     Console.WriteLine("Commands drove rover off the plateau: Rover Deployment Terminated.");
                     Console.WriteLine("=================================================");
                     Console.WriteLine("=================================================");

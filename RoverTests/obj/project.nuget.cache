@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "fK2/arB1cgJp/IGMlcD1PCfitC67URee0a7TwqxrGTIhb1GvlpKPSdelu5KnS4mI9Q9qJc9+UORaavbCMBckig==",
+  "dgSpecHash": "OuFme9HnQ5eWWSLmFXIcwlxbxb46+HNr58gG9JervJXcKS4ax/1p3JjsgrssLZjm3ekKIaFpHqs0nCJXSK1TAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\source\\repos\\RoverOnMars\\RoverTests\\RoverTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\deepequal\\2.0.0\\deepequal.2.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
-    "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
