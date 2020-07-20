@@ -4,6 +4,7 @@ using System.Text;
 
 namespace RoverOnMars
 {
+
     public class Rover : IMoveRover
     {
         public int Xposition { get; set; }
@@ -12,6 +13,9 @@ namespace RoverOnMars
 
         public Direction Direction { get; set; }
 
+        /// <summary>
+        /// Runs when command string contains a l and resets the direction based off current direction.
+        /// </summary>
         private void TurnLeft()
         {
             switch (this.Direction)
@@ -31,6 +35,9 @@ namespace RoverOnMars
             }
         }
 
+        /// <summary>
+        /// Runs when command string contains a r and resets the direction based off current direction. 
+        /// </summary>
         private void TurnRight()
         {
             switch (this.Direction)
@@ -52,6 +59,9 @@ namespace RoverOnMars
             }
         }
 
+        /// <summary>
+        /// Runs when the command string contains a m and moves the rover according to its facing direction. 
+        /// </summary>
         private void Move()
         {
             switch (this.Direction)

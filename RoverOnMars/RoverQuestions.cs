@@ -6,8 +6,16 @@ using System.Text.RegularExpressions;
 
 namespace RoverOnMars
 {
+    /// <summary>
+    /// Class that contains the questions to set up the Rover class.
+    /// </summary>
     class RoverQuestions
     {
+        /// <summary>
+        /// Validates if a user input is only a string of numbers.
+        /// </summary>
+        /// <param name="input">String input to be verified</param>
+        /// <returns>String that contains only numbers</returns>
         private string IsValidNumber(string input)
         {
             while (Regex.IsMatch(input, @"^\d+$") == false)
@@ -19,6 +27,11 @@ namespace RoverOnMars
             return input;
         }
 
+        /// <summary>
+        /// Validates if a user input is a single direction string.
+        /// </summary>
+        /// <param name="input">String input to be verified</param>
+        /// <returns>Single letter string that gives rover facing direction</returns>
         private string IsOnlyDirection(string input)
         {
             while(input.Length > 1 || input.Length == 0)
@@ -36,6 +49,10 @@ namespace RoverOnMars
             return input;
         }
 
+        /// <summary>
+        /// Prompts user for the plateau search area.
+        /// </summary>
+        /// <returns>int[] of height and width of the plateau area</returns>
         public int[] PlateuArea()
         {
             int[] plateuAreaInput = new int[2];
@@ -54,6 +71,11 @@ namespace RoverOnMars
             return plateuAreaInput;
         }
 
+        /// <summary>
+        /// Prompts user for where a rover is to start within the bounds of the plateau area and which direction the rover is facing.
+        /// </summary>
+        /// <param name="areaBounds">Plateau area bounds</param>
+        /// <returns>Tuple of the int x position, int y position and string of the facing direction</returns>
         public Tuple<int,int,string> RoverStartPosition(int[] areaBounds)
         {
             Console.WriteLine("What is the starting latitude position of the rover?");
@@ -107,6 +129,10 @@ namespace RoverOnMars
             
         }
 
+        /// <summary>
+        /// Prompts the user to enter in a string of move commands
+        /// </summary>
+        /// <returns>String of move commands</returns>
         public string MoveCommands()
         {
             Console.WriteLine("Enter in your move commands (m/M = move, l/L = turn Left, r/R = turn Right");
