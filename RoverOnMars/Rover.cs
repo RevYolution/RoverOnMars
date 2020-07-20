@@ -101,12 +101,17 @@ namespace RoverOnMars
                     case 'l': TurnLeft();
                         break;
                     default:
-                        Console.WriteLine($"Not valid command {command}");
+                        Console.WriteLine($"{command} is not a valid command. {command} ignored.");
                         break;
                 }
 
                 if(this.Xposition < 0 || this.Xposition > plateauArea[0] || this.Yposition < 0 || this.Yposition > plateauArea[1])
                 {
+                    Console.WriteLine("=================================================");
+                    Console.WriteLine("=================================================");
+                    Console.WriteLine("Commands drove rover off the plateau: Rover Deployment Terminated.");
+                    Console.WriteLine("=================================================");
+                    Console.WriteLine("=================================================");
                     throw new Exception($"The rover drove off the plateau! Position ({this.Xposition}, {this.Yposition}) is outside of ({plateauArea[0]},{plateauArea[1]})");
                 }
             }

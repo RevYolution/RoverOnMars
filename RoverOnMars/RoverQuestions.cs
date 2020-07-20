@@ -20,7 +20,7 @@ namespace RoverOnMars
         {
             while (Regex.IsMatch(input, @"^\d+$") == false)
             {
-                Console.WriteLine($"Please enter a valid number {input} is not a valid number.");
+                Console.WriteLine($"{input} is not a valid positive integer. Please enter a valid positive integer.");
                 input = Console.ReadLine();
             }
 
@@ -57,13 +57,13 @@ namespace RoverOnMars
         {
             int[] plateuAreaInput = new int[2];
             Console.WriteLine("Welcome! Please provide the search area you would like to explore today.");
-            Console.WriteLine("How wide is the area?");
+            Console.WriteLine("Provide the width of exploration area as a positive integer.");
             string plateauWidthInput = Console.ReadLine();
 
             
 
             int plateuWidth = Convert.ToInt32(IsValidNumber(plateauWidthInput));
-            Console.WriteLine("How tall is the area?");
+            Console.WriteLine("Provide the height of exploration area as a positive integer.");
             string plateauHeightInput = Console.ReadLine();
             int plateuHeight = Convert.ToInt32(IsValidNumber(plateauHeightInput));
             plateuAreaInput[0] = plateuWidth;
@@ -78,7 +78,7 @@ namespace RoverOnMars
         /// <returns>Tuple of the int x position, int y position and string of the facing direction</returns>
         public Tuple<int,int,string> RoverStartPosition(int[] areaBounds)
         {
-            Console.WriteLine("What is the starting latitude position of the rover?");
+            Console.WriteLine($"Provide the starting latitude position of the rover as a positive integer between 0 and {areaBounds[0]}.");
             string startingXInput = Console.ReadLine();
             int startingX = Convert.ToInt32(IsValidNumber(startingXInput));
             while(startingX > areaBounds[0] || startingX < 0)
@@ -98,7 +98,7 @@ namespace RoverOnMars
                     startingX = Convert.ToInt32(Console.ReadLine());
                 }
             }
-            Console.WriteLine("What is the starting longitude position of the rover?");
+            Console.WriteLine($"Provide the starting longitude position of the rover as a positive integer between 0 and {areaBounds[1]}.");
             string startingYInput = Console.ReadLine();
             int startingY = Convert.ToInt32(IsValidNumber(startingYInput));
             while(startingY > areaBounds[1] || startingY < 0)
@@ -118,7 +118,7 @@ namespace RoverOnMars
                     startingY = Convert.ToInt32(Console.ReadLine());
                 }
             }
-            Console.WriteLine("What direction is the rover facing?");
+            Console.WriteLine("What direction is the rover facing? (N/S/E/W)");
             //Needs RegEx to make sure only n,s,e,w
             string startingDirectionInput = Console.ReadLine();
             string startingDirection = IsOnlyDirection(startingDirectionInput).ToUpper();
@@ -135,7 +135,11 @@ namespace RoverOnMars
         /// <returns>String of move commands</returns>
         public string MoveCommands()
         {
-            Console.WriteLine("Enter in your move commands (m/M = move, l/L = turn Left, r/R = turn Right");
+            Console.WriteLine("Enter in your move commands (m/M = move, l/L = turn Left, r/R = turn Right)");
+            Console.WriteLine("=================================================");
+            Console.WriteLine("=================================================");
+            Console.WriteLine("Sample commands: mmlmmr.");
+            Console.WriteLine("Actions performed: move 1 in direction facing, move 1 in direction facing, turn left 90 degrees, move 1 in direction facing, move 1 in direction facing, turn right 90 degrees.");
             string moveCommands = Console.ReadLine().ToLower();
             return moveCommands;
         }

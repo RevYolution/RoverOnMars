@@ -17,6 +17,14 @@ namespace RoverOnMars
 /_/  /_/\__,_/_/  /____/  /_/ |_|\____/|___/\___/_/     /_____/_/|_/ .___/_/\____/_/   \__,_/\__/_/\____/_/ /_/ 
                                                                   /_/                                           
 ";
+            string resultImage = @"
+    ____                          ____             __                                 __     ____                  ____      
+   / __ \____ _   _____  _____   / __ \___  ____  / /___  __  ______ ___  ___  ____  / /_   / __ \___  _______  __/ / /______
+  / /_/ / __ \ | / / _ \/ ___/  / / / / _ \/ __ \/ / __ \/ / / / __ `__ \/ _ \/ __ \/ __/  / /_/ / _ \/ ___/ / / / / __/ ___/
+ / _, _/ /_/ / |/ /  __/ /     / /_/ /  __/ /_/ / / /_/ / /_/ / / / / / /  __/ / / / /_   / _, _/  __(__  ) /_/ / / /_(__  ) 
+/_/ |_|\____/|___/\___/_/     /_____/\___/ .___/_/\____/\__, /_/ /_/ /_/\___/_/ /_/\__/  /_/ |_|\___/____/\__,_/_/\__/____/  
+                                        /_/            /____/                                                                
+";
             Console.WriteLine(roverImage);
             RoverQuestions questions = new RoverQuestions();
             List<Rover> roverList = new List<Rover>();
@@ -38,15 +46,18 @@ namespace RoverOnMars
                     }
                 }
 
-                foreach (var item in roverList)
-                {
-                    
-                    Console.WriteLine($"The rover is at ({item.Xposition}, {item.Yposition}) facing {item.Direction}");
-                }
+                
             }
             catch(Exception offPlateau)
             {
                 Console.WriteLine(offPlateau.Message);
+            }
+
+            Console.WriteLine(resultImage);
+            foreach (var item in roverList)
+            {
+                int counter = 1;
+                Console.WriteLine($"Rover {counter} is at ({item.Xposition}, {item.Yposition}) facing {item.Direction}");
             }
         }
     }
