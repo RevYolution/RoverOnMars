@@ -10,7 +10,7 @@ namespace RoverOnMars
     {
         static void Main(string[] args)
         {
-            
+            Console.SetWindowSize(150, 30);
             string roverImage = @"
     __  ___                   ____                          ______           __                 __  _           
    /  |/  /___ ___________   / __ \____ _   _____  _____   / ____/  ______  / /___  _________ _/ /_(_)___  ____ 

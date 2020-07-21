@@ -50,6 +50,48 @@ namespace RoverTests
             Assert.Equal(testDirection, testRover.Direction);
         }
 
+        [Theory]
+        [InlineData("N", Direction.E)]
+        [InlineData("S", Direction.W)]
+        [InlineData("E", Direction.S)]
+        [InlineData("W", Direction.N)]
+        public void CanTurnRight(string testDirection, Direction expectedDirection)
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(0, 0, testDirection);
+            string testCommands = "r";
+
+            
+            //Act
+            testRover.RoverMove(testArea, testStart, testCommands);
+
+            //Assert
+            Assert.Equal(expectedDirection, testRover.Direction);
+        }
+
+        [Theory]
+        [InlineData("N", Direction.W)]
+        [InlineData("S", Direction.E)]
+        [InlineData("E", Direction.N)]
+        [InlineData("W", Direction.S)]
+        public void CanTurnLeft(string testDirection, Direction expectedDirection)
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(0, 0, testDirection);
+            string testCommands = "l";
+
+
+            //Act
+            testRover.RoverMove(testArea, testStart, testCommands);
+
+            //Assert
+            Assert.Equal(expectedDirection, testRover.Direction);
+        }
+
         [Fact]
         public void CanMoveRoverNorth()
         {
