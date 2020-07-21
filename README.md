@@ -54,12 +54,12 @@ Then select and open ```RoverOnMars.sln```
 ## Visuals
 
 ##### Application Start
-![image](https://user-images.githubusercontent.com/47017138/88101034-472b5380-cb52-11ea-88bb-7b267ef43859.png)
+![image](https://user-images.githubusercontent.com/47017138/88110780-a04eb380-cb61-11ea-81da-2a9481c942b3.png)
 
 ##### Using the Application
-![image](https://user-images.githubusercontent.com/47017138/88101183-7cd03c80-cb52-11ea-93d9-229f4c9069c5.png)
+![image](https://user-images.githubusercontent.com/47017138/88110912-dab85080-cb61-11ea-8a51-0423081c908e.png)
 
-![image](https://user-images.githubusercontent.com/47017138/88101337-ac7f4480-cb52-11ea-8967-8bd48ee5a5ec.png)
+![image](https://user-images.githubusercontent.com/47017138/88111061-18b57480-cb62-11ea-94bc-3fb0ab1ba50d.png)
 
 
 ##### Possible Error Messages
