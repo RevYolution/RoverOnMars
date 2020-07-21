@@ -78,6 +78,8 @@ Move Command Input contains non valid movement commands:\
 Move Command Input results in Rover out of area bounds:\
 ![image](https://user-images.githubusercontent.com/47017138/88101891-8dcd7d80-cb53-11ea-86e4-9dfccdaa7aba.png)
 
+Input not valid Y/N:\
+![image](https://user-images.githubusercontent.com/47017138/88110201-a42e0600-cb60-11ea-8f9c-00b8c881fa14.png)
 
 ##### Application End
 ![image](https://user-images.githubusercontent.com/47017138/88101953-a8075b80-cb53-11ea-960b-ce75500b3ef5.png)
