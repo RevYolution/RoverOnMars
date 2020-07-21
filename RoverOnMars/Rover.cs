@@ -83,6 +83,12 @@ namespace RoverOnMars
             }
         }
 
+        /// <summary>
+        /// Attempts to move a Rover instance from starting location based on move commands given. If a move command moves the Rover off the area given an exception is thrown and deployment of Rovers is stopped.
+        /// </summary>
+        /// <param name="plateauArea">User input for exploration size</param>
+        /// <param name="startPosition">User input starting position and direction of Rover instance</param>
+        /// <param name="commands">User input string of commands.</param>
         public void RoverMove(int[] plateauArea, Tuple<int,int,string> startPosition, string commands)
         {
             this.Xposition = startPosition.Item1;
@@ -111,7 +117,7 @@ namespace RoverOnMars
                     Console.WriteLine("");
                     Console.WriteLine("Commands drove rover off the plateau: Rover Deployment Terminated.");
                     Console.WriteLine("=================================================");
-                    Console.WriteLine("=================================================");
+                    Console.WriteLine("");
                     throw new Exception($"The rover drove off the plateau! Position ({this.Xposition}, {this.Yposition}) is outside of ({plateauArea[0]},{plateauArea[1]})");
                 }
             }

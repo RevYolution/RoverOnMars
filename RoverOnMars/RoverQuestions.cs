@@ -118,7 +118,7 @@ namespace RoverOnMars
                     startingY = Convert.ToInt32(Console.ReadLine());
                 }
             }
-            Console.WriteLine("What direction is the rover facing? (N/S/E/W)");
+            Console.WriteLine("Provide the starting direction of the rover. (N/S/E/W)");
             string startingDirectionInput = Console.ReadLine();
             string startingDirection = IsOnlyDirection(startingDirectionInput).ToUpper();
 
@@ -136,8 +136,8 @@ namespace RoverOnMars
         {
             Console.WriteLine("Enter in your move commands (m/M = move, l/L = turn Left, r/R = turn Right)");
             Console.WriteLine("=================================================");
-            Console.WriteLine("=================================================");
             Console.WriteLine("Sample commands: mmlmmr.");
+            Console.WriteLine("");
             Console.WriteLine("Actions performed: move 1 in direction facing, move 1 in direction facing, turn left 90 degrees, move 1 in direction facing, move 1 in direction facing, turn right 90 degrees.");
             string moveCommands = Console.ReadLine().ToLower();
             return moveCommands;
