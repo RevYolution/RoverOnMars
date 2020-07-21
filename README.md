@@ -7,7 +7,7 @@
 ------------------------------
 
 ## Description
-Console application that simulates deployment and movement of a Rover on Mars. Users are asked a seris of input questions to set up the search area, where the rover is innitial situated and the commands to move or turn the rover. 
+Console application that simulates deployment and movement of a Rover on Mars. Users are asked a seris of input questions to set up the search area, rover start position/direction and the commands to move/turn the rover. 
 
 ------------------------------
 
