@@ -20,8 +20,16 @@ This plateau, which is curiously rectangular, must be navigated by the rovers so
 
 
 ## Assumptions
-1. The deployed Rovers are simple based off the single string move command input requirement. As a result the Rover will not be able to recognize that any movement command will send it out of bounds. Thus Rover deployment should be terminated if such an event occurs.
+1. The deployed Rovers are not complex based off the single string move command input requirement. As a result the Rover will not be able to recognize that any movement command will send it out of bounds. Thus Rover deployment should be terminated if such an event occurs.
 1. The successful deployment of successive Rovers depends on each Rover being able to successfully complete its movement commands. Thus calling the RoverMove method is allowable before collecting inputs for successive Rovers.
+
+## User Interaction
+- Users interact with the application through a series of questions presented in the Console
+- Users input is typed into the Console interface
+- Users input is controled and guided so that users provides the proper response to the question presented
+
+## Considerations
+- If running application on MacOS delete or comment out `Console.SetWindowSize(150, 30)` within the Program.cs file. 
 
 ------------------------------
 
