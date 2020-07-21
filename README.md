@@ -7,7 +7,7 @@
 ------------------------------
 
 ## Description
-Console application that simulates deployment and movement of a Rover on Mars. Users are asked a seris of input questions to set up the search area, rover start position/direction and the commands to move/turn the rover. 
+Console application that simulates deployment and movement of a Rover on Mars. Users are asked a series of input questions to set up the search area, rover start position/direction and the commands to move/turn the rover. 
 
 ------------------------------
 
@@ -48,10 +48,10 @@ Input not a positive integer:\
 Input not a valid direction:\
 ![image](https://user-images.githubusercontent.com/47017138/88101649-257e9c00-cb53-11ea-8acc-52d0e2a39be4.png)
 
-Command Input contains non valid movement commands:\
+Move Command Input contains non valid movement commands:\
 ![image](https://user-images.githubusercontent.com/47017138/88101751-5068f000-cb53-11ea-80e3-c89514c736c2.png)
 
-Command Input results in Rover out of area bounds:\
+Move Command Input results in Rover out of area bounds:\
 ![image](https://user-images.githubusercontent.com/47017138/88101891-8dcd7d80-cb53-11ea-86e4-9dfccdaa7aba.png)
 
 
