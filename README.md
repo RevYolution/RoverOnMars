@@ -29,7 +29,9 @@ This plateau, which is curiously rectangular, must be navigated by the rovers so
 - Users input is controled and guided so that users provides the proper response to the question presented
 
 ## Considerations
-- If running application on MacOS delete or comment out `Console.SetWindowSize(150, 30)` within the Program.cs file. 
+- If running application on MacOS delete or comment out `Console.SetWindowSize(150, 30)` within the Program.cs file. If this is not done it will throw an error and not allow application to run.
+- `Console.SetWindowSize(150, 30)` is used to set the ideal Console Window size to properly view application
+- If `Console.SetWindowSize(150, 30)` is removed enlarge Console Window size manually at or above 150 width and 30 height for best experience.
 
 ------------------------------
 
