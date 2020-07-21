@@ -39,7 +39,7 @@ Then select and open ```RoverOnMars.sln```
 
 
 ##### Possible Error Messages
-Input too out of area bounds:
+Input too out of area bounds:\n
 ![image](https://user-images.githubusercontent.com/47017138/88101439-d6386b80-cb52-11ea-8f02-06feda0060ef.png)
 
 Input not a positive integer:
