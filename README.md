@@ -14,7 +14,7 @@ Console application that simulates deployment and movement of a Rover on Mars. U
 ## Getting Started
 Clone this repository to your local machine.
 ```
-$ git clone [https://github.com/RevYolution/RoverOnMars.git]
+$ git clone https://github.com/RevYolution/RoverOnMars.git
 ```
 #### To run the program from Visual Studio:
 Select ```File``` -> ```Open``` -> ```Project/Solution```
@@ -30,14 +30,23 @@ Then select and open ```RoverOnMars.sln```
 ## Visuals
 
 ##### Application Start
-![image](https://user-images.githubusercontent.com/47017138/87991352-daa14d80-ca9a-11ea-870b-54c3cd66befb.png)
+![image](https://user-images.githubusercontent.com/47017138/88101034-472b5380-cb52-11ea-88bb-7b267ef43859.png)
+
 ##### Using the Application
-![image](https://user-images.githubusercontent.com/47017138/87991481-1f2ce900-ca9b-11ea-9e15-a9a0f0afd7c6.png)
-![image](https://user-images.githubusercontent.com/47017138/87991604-5b604980-ca9b-11ea-95c4-c05264a942af.png)
+![image](https://user-images.githubusercontent.com/47017138/88101183-7cd03c80-cb52-11ea-93d9-229f4c9069c5.png)
+![image](https://user-images.githubusercontent.com/47017138/88101337-ac7f4480-cb52-11ea-8967-8bd48ee5a5ec.png)
+
+
+##### Possible Error Messages
+![image](https://user-images.githubusercontent.com/47017138/88101439-d6386b80-cb52-11ea-8f02-06feda0060ef.png)
+![image](https://user-images.githubusercontent.com/47017138/88101559-054edd00-cb53-11ea-9884-2b3c5daa2594.png)
+![image](https://user-images.githubusercontent.com/47017138/88101649-257e9c00-cb53-11ea-8acc-52d0e2a39be4.png)
+![image](https://user-images.githubusercontent.com/47017138/88101751-5068f000-cb53-11ea-80e3-c89514c736c2.png)
+![image](https://user-images.githubusercontent.com/47017138/88101891-8dcd7d80-cb53-11ea-86e4-9dfccdaa7aba.png)
+
 
 ##### Application End
-![image](https://user-images.githubusercontent.com/47017138/87991667-834fad00-ca9b-11ea-8788-8200a7340963.png)
-
+![image](https://user-images.githubusercontent.com/47017138/88101953-a8075b80-cb53-11ea-960b-ce75500b3ef5.png)
 
 ------------------------------
 
