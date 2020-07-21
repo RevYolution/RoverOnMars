@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 
 namespace RoverOnMars
@@ -32,6 +33,26 @@ namespace RoverOnMars
             List<Rover> roverList = new List<Rover>();
             bool anotherRover = true;
             int[] plateauArea = questions.PlateauArea();
+             string IsYorN(string input)
+             {
+                while (input.Length > 1 || input.Length == 0)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("---Please enter a single letter Y/N.");
+                    Console.Write("> ");
+                    input = Console.ReadLine();
+                }
+
+                while (Regex.IsMatch(input, @"[^YyNn]"))
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine($"---Please enter either Y/N. {input} is not valid.");
+                    Console.Write("> ");
+                    input = Console.ReadLine();
+                }
+
+                return input;
+             }
 
 
             try
@@ -47,7 +68,8 @@ namespace RoverOnMars
                     Console.WriteLine("========================================================");
                     Console.WriteLine("Would you like to deploy another rover? Y/N");
                     Console.Write("> ");
-                    char moreRovers = Convert.ToChar(Console.ReadLine().ToLower());
+                    string moreRoversInput = Console.ReadLine();
+                    char moreRovers = Convert.ToChar(IsYorN(moreRoversInput).ToLower());
                     if(moreRovers == 'n')
                     {
                         anotherRover = false;
