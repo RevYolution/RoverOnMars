@@ -162,5 +162,132 @@ namespace RoverTests
             Assert.Equal(Direction.E, testRover.Direction);
         }
 
+        [Fact]
+        public void CanThrow_00S_RoverException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(0, 0, "S");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrow_00W_RoverException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(0, 0, "W");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrowMaxArea_N_RoverException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(5, 5, "N");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrowMaxArea_E_RoverException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(5, 5, "E");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrow_N_EdgeException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(2, 5, "N");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrow_S_EdgeException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(2, 0, "S");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrow_E_EdgeException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(5, 2, "E");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
+
+        [Fact]
+        public void CanThrow_W_EdgeException()
+        {
+            //Arrange
+            Rover testRover = new Rover();
+            int[] testArea = new int[] { 5, 5 };
+            Tuple<int, int, string> testStart = new Tuple<int, int, string>(0, 2, "W");
+            string testCommands = "mmlmmrmm";
+
+            //Act
+            var ex = Assert.Throws<Exception>(() => testRover.RoverMove(testArea, testStart, testCommands));
+
+            //Assert
+            Assert.Equal($"The rover drove off the plateau! Position ({testRover.Xposition}, {testRover.Yposition}) is outside of ({testArea[0]},{testArea[1]})", ex.Message);
+        }
     }
 }
