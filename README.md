@@ -21,7 +21,7 @@ This plateau, which is curiously rectangular, must be navigated by the rovers so
 
 ## Assumptions
 1. The deployed Rovers are not complex based off the single string move command input requirement. As a result the Rover will not be able to recognize that any movement command will send it out of bounds. Thus Rover deployment should be terminated if such an event occurs.
-1. The successful deployment of successive Rovers depends on each Rover being able to successfully complete its movement commands. Thus calling the RoverMove method is allowable before collecting inputs for successive Rovers.
+1. To deploy new Rovers the current Rovers movement commands need to be deemed successful. Thus after input of the Rover movement parameters the movement commands of the current Rover must be excecuted and deemed successful before new Rover input parameters are collected.
 
 ## User Interaction
 - Users interact with the application through a series of questions presented in the Console
