@@ -34,14 +34,24 @@ Then select and open ```RoverOnMars.sln```
 
 ##### Using the Application
 ![image](https://user-images.githubusercontent.com/47017138/88101183-7cd03c80-cb52-11ea-93d9-229f4c9069c5.png)
+
 ![image](https://user-images.githubusercontent.com/47017138/88101337-ac7f4480-cb52-11ea-8967-8bd48ee5a5ec.png)
 
 
 ##### Possible Error Messages
+Input too out of area bounds:
 ![image](https://user-images.githubusercontent.com/47017138/88101439-d6386b80-cb52-11ea-8f02-06feda0060ef.png)
+
+Input not a positive integer:
 ![image](https://user-images.githubusercontent.com/47017138/88101559-054edd00-cb53-11ea-9884-2b3c5daa2594.png)
+
+Input not a valid direction:
 ![image](https://user-images.githubusercontent.com/47017138/88101649-257e9c00-cb53-11ea-8acc-52d0e2a39be4.png)
+
+Command Input contains not valid movement commands:
 ![image](https://user-images.githubusercontent.com/47017138/88101751-5068f000-cb53-11ea-80e3-c89514c736c2.png)
+
+Command Input results in Rover out of area bounds:
 ![image](https://user-images.githubusercontent.com/47017138/88101891-8dcd7d80-cb53-11ea-86e4-9dfccdaa7aba.png)
 
 
