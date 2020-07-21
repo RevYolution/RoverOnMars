@@ -9,6 +9,20 @@
 ## Description
 Console application that simulates deployment and movement of a Rover on Mars. Users are asked a series of input questions to set up the search area, rover start position/direction and the commands to move/turn the rover. 
 
+## Problem Requirements
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars.
+This plateau, which is curiously rectangular, must be navigated by the rovers so that their on board cameras can get a complete view of the surrounding terrain to send back to Earth.
+1. A rover's position is represented by a combination of an x and y co-ordinates and a letter representing one of the four cardinal compass points. 
+1. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
+1. In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
+'M' means move forward one grid point, and maintain the same heading.
+1. Assume that the square directly North from (x, y) is (x, y+1).
+
+
+## Assumptions
+1. The deployed Rovers are simple based off the single string move command input requirement. As a result the Rover will not be able to recognize that any movement command will send it out of bounds. Thus Rover deployment should be terminated if such an event occurs.
+1. The successful deployment of successive Rovers depends on each Rover being able to successfully complete its movement commands. Thus calling the RoverMove method is allowable before collecting inputs for successive Rovers.
+
 ------------------------------
 
 ## Getting Started
