@@ -53,9 +53,9 @@ namespace RoverOnMars
         /// Prompts user for the plateau search area.
         /// </summary>
         /// <returns>int[] of height and width of the plateau area</returns>
-        public int[] PlateuArea()
+        public int[] PlateauArea()
         {
-            int[] plateuAreaInput = new int[2];
+            int[] plateauAreaInput = new int[2];
             Console.WriteLine("Welcome! Please provide the search area you would like to explore today.");
             Console.WriteLine("Provide the width of exploration area as a positive integer.");
             string plateauWidthInput = Console.ReadLine();
@@ -66,9 +66,9 @@ namespace RoverOnMars
             Console.WriteLine("Provide the height of exploration area as a positive integer.");
             string plateauHeightInput = Console.ReadLine();
             int plateuHeight = Convert.ToInt32(IsValidNumber(plateauHeightInput));
-            plateuAreaInput[0] = plateuWidth;
-            plateuAreaInput[1] = plateuHeight;
-            return plateuAreaInput;
+            plateauAreaInput[0] = plateuWidth;
+            plateauAreaInput[1] = plateuHeight;
+            return plateauAreaInput;
         }
 
         /// <summary>
@@ -119,7 +119,6 @@ namespace RoverOnMars
                 }
             }
             Console.WriteLine("What direction is the rover facing? (N/S/E/W)");
-            //Needs RegEx to make sure only n,s,e,w
             string startingDirectionInput = Console.ReadLine();
             string startingDirection = IsOnlyDirection(startingDirectionInput).ToUpper();
 

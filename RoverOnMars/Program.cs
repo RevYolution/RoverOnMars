@@ -29,14 +29,14 @@ namespace RoverOnMars
             RoverQuestions questions = new RoverQuestions();
             List<Rover> roverList = new List<Rover>();
             bool anotherRover = true;
-            int[] plateuArea = questions.PlateuArea();
+            int[] plateauArea = questions.PlateauArea();
 
             try
             {
                 while(anotherRover)
                 {
                     Rover rover = new Rover();
-                    rover.RoverMove(plateuArea, questions.RoverStartPosition(plateuArea), questions.MoveCommands());
+                    rover.RoverMove(plateauArea, questions.RoverStartPosition(plateauArea), questions.MoveCommands());
                     roverList.Add(rover);
                     Console.WriteLine("Would you like to deploy another rover? Y/N");
                     char moreRovers = Convert.ToChar(Console.ReadLine().ToLower());
