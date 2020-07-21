@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace RoverOnMars
 {
@@ -107,7 +108,7 @@ namespace RoverOnMars
                     case 'l': TurnLeft();
                         break;
                     default:
-                        Console.WriteLine($"{command} is not a valid command. {command} ignored.");
+                        Console.WriteLine($"---'{command}' is not a valid command. '{command}' ignored.");
                         break;
                 }
 
@@ -115,8 +116,9 @@ namespace RoverOnMars
                 {
                     Console.WriteLine("");
                     Console.WriteLine("");
-                    Console.WriteLine("Commands drove rover off the plateau: Rover Deployment Terminated.");
+                    Console.WriteLine($"---Commands '{commands}' drove this rover off the plateau: Rover Deployment Terminated.");
                     Console.WriteLine("=================================================");
+                    Thread.Sleep(2500);
                     Console.WriteLine("");
                     throw new Exception($"The rover drove off the plateau! Position ({this.Xposition}, {this.Yposition}) is outside of ({plateauArea[0]},{plateauArea[1]})");
                 }

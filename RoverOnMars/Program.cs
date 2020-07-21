@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace RoverOnMars
 {
@@ -9,6 +10,7 @@ namespace RoverOnMars
     {
         static void Main(string[] args)
         {
+            
             string roverImage = @"
     __  ___                   ____                          ______           __                 __  _           
    /  |/  /___ ___________   / __ \____ _   _____  _____   / ____/  ______  / /___  _________ _/ /_(_)___  ____ 
@@ -31,6 +33,7 @@ namespace RoverOnMars
             bool anotherRover = true;
             int[] plateauArea = questions.PlateauArea();
 
+
             try
             {
                 while(anotherRover)
@@ -38,7 +41,12 @@ namespace RoverOnMars
                     Rover rover = new Rover();
                     rover.RoverMove(plateauArea, questions.RoverStartPosition(plateauArea), questions.MoveCommands());
                     roverList.Add(rover);
+                    Console.WriteLine("Rover Deployment Successful");
+                    Console.WriteLine("");
+                    Thread.Sleep(2500);
+                    Console.WriteLine("========================================================");
                     Console.WriteLine("Would you like to deploy another rover? Y/N");
+                    Console.Write("> ");
                     char moreRovers = Convert.ToChar(Console.ReadLine().ToLower());
                     if(moreRovers == 'n')
                     {
@@ -50,15 +58,21 @@ namespace RoverOnMars
             }
             catch(Exception offPlateau)
             {
+                
                 Console.WriteLine(offPlateau.Message);
+                Thread.Sleep(2500);
+
             }
 
             Console.WriteLine(resultImage);
+            int counter = 1;
             foreach (var item in roverList)
             {
-                int counter = 1;
                 Console.WriteLine($"Rover {counter} is at ({item.Xposition}, {item.Yposition}) facing {item.Direction}");
+                counter++;
             }
+
+            Console.WriteLine("========================================================");
         }
     }
 }

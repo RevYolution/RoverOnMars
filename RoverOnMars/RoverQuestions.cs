@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace RoverOnMars
 {
@@ -20,7 +21,9 @@ namespace RoverOnMars
         {
             while (Regex.IsMatch(input, @"^\d+$") == false)
             {
-                Console.WriteLine($"{input} is not a valid positive integer. Please enter a valid positive integer.");
+                Console.WriteLine("");
+                Console.WriteLine($"---{input} is not a valid positive integer. Please enter a valid positive integer.");
+                Console.Write("> ");
                 input = Console.ReadLine();
             }
 
@@ -36,13 +39,17 @@ namespace RoverOnMars
         {
             while(input.Length > 1 || input.Length == 0)
             {
-                Console.WriteLine("Please enter a single letter direction (N/S/E/W).");
+                Console.WriteLine("");
+                Console.WriteLine("---Please enter a single letter direction (N/S/E/W).");
+                Console.Write("> ");
                 input = Console.ReadLine();
             }
 
             while(Regex.IsMatch(input, @"[^NnSsEeWw]"))
             {
-                Console.WriteLine($"Please enter a compass direction (N/S/E/W). {input} is not a valid direction.");
+                Console.WriteLine("");
+                Console.WriteLine($"---Please enter a compass direction (N/S/E/W). {input} is not a valid direction.");
+                Console.Write("> ");
                 input = Console.ReadLine();
             }
 
@@ -58,12 +65,15 @@ namespace RoverOnMars
             int[] plateauAreaInput = new int[2];
             Console.WriteLine("Welcome! Please provide the search area you would like to explore today.");
             Console.WriteLine("Provide the width of exploration area as a positive integer.");
+            Console.Write("> ");
             string plateauWidthInput = Console.ReadLine();
 
             
 
             int plateuWidth = Convert.ToInt32(IsValidNumber(plateauWidthInput));
+            Console.WriteLine("");
             Console.WriteLine("Provide the height of exploration area as a positive integer.");
+            Console.Write("> ");
             string plateauHeightInput = Console.ReadLine();
             int plateuHeight = Convert.ToInt32(IsValidNumber(plateauHeightInput));
             plateauAreaInput[0] = plateuWidth;
@@ -78,47 +88,69 @@ namespace RoverOnMars
         /// <returns>Tuple of the int x position, int y position and string of the facing direction</returns>
         public Tuple<int,int,string> RoverStartPosition(int[] areaBounds)
         {
+            Console.WriteLine("");
+            Console.WriteLine("The following will set deployment of a Rover.\n Deployment will continue until you no longer want to deploy a rover \n or a set of movement commands moves a rover out of the plateau area bounds.");
+            Thread.Sleep(5000);
+            Console.WriteLine("");
+            Console.WriteLine("========================================================");
             Console.WriteLine($"Provide the starting latitude position of the rover as a positive integer between 0 and {areaBounds[0]}.");
+            Console.Write("> ");
             string startingXInput = Console.ReadLine();
             int startingX = Convert.ToInt32(IsValidNumber(startingXInput));
             while(startingX > areaBounds[0] || startingX < 0)
             {
                 while(startingX > areaBounds[0])
                 {
-                    Console.WriteLine($"The starting latitude cannot be larger than {areaBounds[0]}");
-                    Console.WriteLine("====================================");
+                    Console.WriteLine("");
+                    Console.WriteLine($"---The starting latitude cannot be larger than {areaBounds[0]}");
+                    Console.WriteLine("========================================================");
                     Console.WriteLine($"Please enter a starting latitude less than {areaBounds[0]}");
-                    startingX = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("> ");
+                    startingXInput = Console.ReadLine();
+                    startingX = Convert.ToInt32(IsValidNumber(startingXInput));
                 }
                 while (startingX < 0)
                 {
-                    Console.WriteLine($"The starting latitude cannot be less than 0");
-                    Console.WriteLine("====================================");
+                    Console.WriteLine("");
+                    Console.WriteLine($"---The starting latitude cannot be less than 0");
+                    Console.WriteLine("========================================================");
                     Console.WriteLine($"Please enter a starting latitude greater than 0");
-                    startingX = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("> ");
+                    startingXInput = Console.ReadLine();
+                    startingX = Convert.ToInt32(IsValidNumber(startingXInput));
                 }
             }
+            Console.WriteLine("");
             Console.WriteLine($"Provide the starting longitude position of the rover as a positive integer between 0 and {areaBounds[1]}.");
+            Console.Write("> ");
             string startingYInput = Console.ReadLine();
             int startingY = Convert.ToInt32(IsValidNumber(startingYInput));
             while(startingY > areaBounds[1] || startingY < 0)
             {
                 while (startingY > areaBounds[1])
                 {
-                    Console.WriteLine($"The starting longitude cannot be larger than {areaBounds[1]}");
-                    Console.WriteLine("====================================");
+                    Console.WriteLine("");
+                    Console.WriteLine($"---The starting longitude cannot be larger than {areaBounds[1]}");
+                    Console.WriteLine("========================================================");
                     Console.WriteLine($"Please enter a starting longitude less than {areaBounds[1]}");
-                    startingY = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("> ");
+                    startingYInput = Console.ReadLine();
+                    startingY = Convert.ToInt32(IsValidNumber(startingYInput));
                 }
                 while (startingY < 0)
                 {
-                    Console.WriteLine($"The starting longitude cannot be less than 0");
-                    Console.WriteLine("====================================");
+                    Console.WriteLine("");
+                    Console.WriteLine($"---The starting longitude cannot be less than 0");
+                    Console.WriteLine("========================================================");
                     Console.WriteLine($"Please enter a starting longitude greater than 0");
-                    startingY = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("> ");
+                    startingYInput = Console.ReadLine();
+                    startingY = Convert.ToInt32(IsValidNumber(startingYInput));
                 }
             }
+            Console.WriteLine("");
             Console.WriteLine("Provide the starting direction of the rover. (N/S/E/W)");
+            Console.Write("> ");
             string startingDirectionInput = Console.ReadLine();
             string startingDirection = IsOnlyDirection(startingDirectionInput).ToUpper();
 
@@ -134,11 +166,15 @@ namespace RoverOnMars
         /// <returns>String of move commands</returns>
         public string MoveCommands()
         {
-            Console.WriteLine("Enter in your move commands (m/M = move, l/L = turn Left, r/R = turn Right)");
-            Console.WriteLine("=================================================");
-            Console.WriteLine("Sample commands: mmlmmr.");
+
+            Console.WriteLine("========================================================");
+            Console.WriteLine("Example movement command string: mmlmmr");
             Console.WriteLine("");
-            Console.WriteLine("Actions performed: move 1 in direction facing, move 1 in direction facing, turn left 90 degrees, move 1 in direction facing, move 1 in direction facing, turn right 90 degrees.");
+            Console.WriteLine("Actions performed: \n move 1 in direction facing, \n move 1 in direction facing, \n turn left 90 degrees, \n move 1 in direction facing, \n move 1 in direction facing, \n turn right 90 degrees.");
+            Thread.Sleep(2500);
+            Console.WriteLine("");
+            Console.WriteLine("Enter in your move commands (m/M = move, l/L = turn Left, r/R = turn Right)");
+            Console.Write("> ");
             string moveCommands = Console.ReadLine().ToLower();
             return moveCommands;
         }
