@@ -85,5 +85,7 @@ Input not valid Y/N:\
 ![image](https://user-images.githubusercontent.com/47017138/88101953-a8075b80-cb53-11ea-960b-ce75500b3ef5.png)
 
 ------------------------------
+##### References
+https://github.com/JangirSumit/mars-rover-problem for verification of initial logic and understanding of problem domain.
 
 ## Change Log
